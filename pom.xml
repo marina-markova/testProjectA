@@ -31,10 +31,27 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- Useful for Heroku Deployment -->
+        
+        <full-artifact-name>target/${project.artifactId}-${project.version}.jar</full-artifact-name>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!-- Useful for Heroku Deployment -->
+			
+			<plugin>
+		      <groupId>com.heroku.sdk</groupId>
+		      <artifactId>heroku-maven-plugin</artifactId>
+		      <version>2.0.11</version>
+		      <configuration>
+		        <appName>cicd-spring-boot-java-app</appName>
+		        <processTypes>
+		          <web>java $JAVA_OPTS -jar -Dserver.port=$PORT ${full-artifact-name}</web>
+		        </processTypes>
+		      </configuration>
+      		</plugin> 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
