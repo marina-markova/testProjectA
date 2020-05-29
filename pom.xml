@@ -14,9 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Project_A-1</name>
 	<description>Implementing CI/CD on Spring Boot Java App</description>
-
 	<properties>
-	<property> full-artifact-name</property>
 		<java.version>1.8</java.version>
 	</properties>
 
