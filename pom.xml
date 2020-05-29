@@ -28,7 +28,7 @@
 		
 		<!-- Instead of "fanjups", please add your Docker Hub username -->
 		
-		<docker.image.prefix>fanjups</docker.image.prefix>
+		<!-- <docker.image.prefix>fanjups</docker.image.prefix> -->
 		
 		<!--Not adding artifacts to remote repository-->
 		
@@ -173,7 +173,7 @@
 		      <artifactId>heroku-maven-plugin</artifactId>
 		      <version>2.0.11</version>
 		      <configuration>
-		        <appName>cicd-spring-boot-java-app</appName>
+		        <appName>testProjectA</appName>
 		        <processTypes>
 		          <web>java $JAVA_OPTS -jar -Dserver.port=$PORT ${full-artifact-name}</web>
 		        </processTypes>
@@ -241,20 +241,7 @@
 		</license>
 	</licenses>
   
-  <developers>
-  	<developer>
-  		<email>jupsfan@gmail.com</email>
-		<name>Fanon Jupkwo</name>
-		<url>https://github.com/FanJups</url>
-		<id>FanJups</id>
-  	</developer>
-      
-  </developers>
-  
-  <organization>
-		<name>FAN JUPS TECH</name>
-		<url>https://github.com/FanJups/</url>
-	</organization>
+
   
   <issueManagement>
 		<system>GitHub Issues</system>
